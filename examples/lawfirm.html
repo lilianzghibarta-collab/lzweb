@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sterling & Associates | Law Firm</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sterling & Associates - Premier law firm providing exceptional legal services since 1985. Specializing in corporate law, civil litigation, real estate, family law, criminal defense, and estate planning with 98% success rate.">
+    <meta name="keywords" content="law firm, attorney, lawyer, corporate law, civil litigation, real estate law, family law, criminal defense, estate planning, New York lawyers, legal services, business attorney">
+    <meta name="author" content="Sterling & Associates Law Firm">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sterling & Associates | Excellence in Legal Representation">
+    <meta property="og:description" content="Trusted legal counsel for over 35 years. Expert attorneys specializing in corporate law, litigation, and family law with 98% success rate and $500M+ recovered for clients.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sterlinglaw.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80&auto=format">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sterling & Associates | Excellence in Legal Representation">
+    <meta name="twitter:description" content="Premier law firm providing exceptional legal services since 1985. 98% success rate, $500M+ recovered for clients.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80&auto=format">
+    
+    <!-- Preconnect Hints -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Garamond', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f2744;
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 400;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c9b037;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c9b037;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(15, 39, 68, 0.85), rgba(15, 39, 68, 0.85)),
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80&auto=format') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .hero-content .divider {
+            width: 120px;
+            height: 2px;
+            background: #c9b037;
+            margin: 0 auto 25px;
+        }
+
+        .hero-content p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #c9b037;
+            font-size: 16px;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .hero-btn:hover {
+            background: #c9b037;
+            color: #0f2744;
+        }
+
+        /* About */
+        .about {
+            padding: 120px 40px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #0f2744;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #c9b037;
+            margin: 25px auto 0;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 2;
+        }
+
+        /* Practice Areas */
+        .practice-areas {
+            padding: 120px 40px;
+            background: #f8f9fa;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 70px;
+        }
+
+        .practice-card {
+            background: white;
+            padding: 50px 40px;
+            text-align: center;
+            border-top: 4px solid #c9b037;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+            color: #0f2744;
+        }
+
+        .practice-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #0f2744;
+            font-weight: 500;
+        }
+
+        .practice-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Stats */
+        .stats {
+            padding: 100px 40px;
+            background: #0f2744;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat-box {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #c9b037;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        /* Attorneys */
+        .attorneys {
+            padding: 120px 40px;
+            background: white;
+        }
+
+        .attorneys-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 70px;
+        }
+
+        .attorney-card {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            transition: all 0.3s;
+        }
+
+        .attorney-card:hover {
+            background: #0f2744;
+            color: white;
+        }
+
+        .attorney-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 5px solid #c9b037;
+        }
+
+        .attorney-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #0f2744;
+        }
+
+        .attorney-card:hover h3 {
+            color: #c9b037;
+        }
+
+        .attorney-title {
+            color: #c9b037;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .attorney-speciality {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .attorney-card:hover .attorney-speciality {
+            color: #ccc;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 40px;
+            background: #f8f9fa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 70px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 50px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #c9b037;
+        }
+
+        .testimonial-text {
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0f2744;
+            font-size: 1.1em;
+        }
+
+        .testimonial-case {
+            color: #888;
+            margin-top: 5px;
+            font-size: 0.95em;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 120px 40px;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 70px;
+        }
+
+        .contact-info {
+            padding: 50px;
+            background: #0f2744;
+            color: white;
+        }
+
+        .contact-info h3 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #c9b037;
+        }
+
+        .info-item {
+            margin-bottom: 35px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-icon {
+            font-size: 1.8em;
+            color: #c9b037;
+        }
+
+        .info-text h4 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .info-text p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 25px;
+            border: 2px solid #ddd;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: #c9b037;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: #0f2744;
+            color: white;
+            border: none;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background: #c9b037;
+        }
+
+        footer {
+            background: #0a1929;
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 15px 40px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #c9b037;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .back-link:hover {
+            background: #c9b037;
+            color: #0f2744;
+        }
+
+        /* Tablet and Below */
+        @media (max-width: 992px) {
+            nav .container {
+                padding: 0 25px;
+            }
+
+            nav ul {
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+
+            .hero-content p {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 3em;
+            }
+
+            .practice-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .attorneys-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                gap: 50px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .hero {
+                height: 80vh;
+                padding: 0 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+            }
+
+            .hero-content .divider {
+                width: 80px;
+                margin: 0 auto 20px;
+            }
+
+            .hero-content p {
+                font-size: 1.1em;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+
+            .hero-btn {
+                padding: 15px 40px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .about,
+            .practice-areas,
+            .attorneys,
+            .testimonials,
+            .contact {
+                padding: 80px 20px;
+            }
+
+            .stats {
+                padding: 60px 20px;
+            }
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
+            }
+
+            .section-title::after {
+                width: 70px;
+                height: 2px;
+                margin: 20px auto 0;
+            }
+
+            .section-subtitle {
+                font-size: 1em;
+            }
+
+            .about-content p {
+                font-size: 1.05em;
+                margin-bottom: 20px;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .practice-card {
+                padding: 40px 30px;
+            }
+
+            .practice-icon {
+                font-size: 3em;
+                margin-bottom: 20px;
+            }
+
+            .practice-card h3 {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 3em;
+                margin-bottom: 10px;
+            }
+
+            .stat-label {
+                font-size: 1em;
+            }
+
+            .attorneys-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .attorney-card {
+                padding: 35px 25px;
+            }
+
+            .attorney-photo {
+                width: 150px;
+                height: 150px;
+                border: 4px solid #c9b037;
+            }
+
+            .attorney-card h3 {
+                font-size: 1.3em;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .testimonial-card {
+                padding: 35px 25px;
+                border-left-width: 4px;
+            }
+
+            .testimonial-text {
+                font-size: 1.05em;
+                margin-bottom: 25px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-top: 50px;
+            }
+
+            .contact-info {
+                padding: 35px 25px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.7em;
+                margin-bottom: 30px;
+            }
+
+            .info-item {
+                margin-bottom: 30px;
+            }
+
+            .info-icon {
+                font-size: 1.5em;
+            }
+
+            .info-text h4 {
+                font-size: 1.1em;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form select {
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 15px;
+            }
+
+            .submit-btn {
+                padding: 18px;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+
+            .back-link {
+                padding: 12px 35px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+
+            .hero-content h1 {
+                font-size: 2em;
+                letter-spacing: 1px;
+            }
+
+            .hero-content p {
+                font-size: 1em;
+            }
+
+            .hero-btn {
+                padding: 12px 30px;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .section-subtitle {
+                font-size: 0.95em;
+            }
+
+            .about-content p {
+                font-size: 1em;
+            }
+
+            .practice-card {
+                padding: 30px 20px;
+            }
+
+            .practice-icon {
+                font-size: 2.5em;
+            }
+
+            .practice-card h3 {
+                font-size: 1.3em;
+            }
+
+            .practice-card p {
+                font-size: 0.95em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+            }
+
+            .stat-label {
+                font-size: 0.95em;
+            }
+
+            .attorney-photo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .attorney-card h3 {
+                font-size: 1.2em;
+            }
+
+            .attorney-title,
+            .attorney-speciality {
+                font-size: 0.9em;
+            }
+
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+
+            .testimonial-text {
+                font-size: 1em;
+            }
+
+            .testimonial-author {
+                font-size: 1em;
+            }
+
+            .testimonial-case {
+                font-size: 0.9em;
+            }
+
+            .contact-info {
+                padding: 30px 20px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.5em;
+                margin-bottom: 25px;
+            }
+
+            .info-item {
+                margin-bottom: 25px;
+                gap: 15px;
+            }
+
+            .info-text h4 {
+                font-size: 1em;
+            }
+
+            .info-text p {
+                font-size: 0.9em;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form select {
+                padding: 13px;
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                padding: 16px;
+                font-size: 14px;
+            }
+
+            .back-link {
+                padding: 10px 25px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo"><span>Sterling</span> & Associates</div>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#practice">PRACTICE AREAS</a></li>
+                <li><a href="#attorneys">ATTORNEYS</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Excellence in Legal Representation</h1>
+            <div class="divider"></div>
+            <p>Protecting Your Rights Since 1985</p>
+            <a href="#contact" class="hero-btn">Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Our Firm</h2>
+                <p class="section-subtitle">Trusted Legal Counsel for Over 35 Years</p>
+            </div>
+
+            <div class="about-content">
+                <p>Sterling & Associates is a premier law firm dedicated to providing exceptional legal services with integrity, professionalism, and results. Founded in 1985, we have built a reputation for excellence in legal representation.</p>
+                <p>Our team of experienced attorneys brings together decades of combined expertise across multiple practice areas. We pride ourselves on our client-focused approach, ensuring personalized attention and strategic solutions for every case.</p>
+                <p>Whether you're facing a complex litigation matter, need guidance on corporate transactions, or require representation in family law, our firm has the knowledge and resources to achieve the best possible outcome for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="practice-areas" id="practice">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Practice Areas</h2>
+                <p class="section-subtitle">Comprehensive Legal Solutions</p>
+            </div>
+
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">⚖️</div>
+                    <h3>Corporate Law</h3>
+                    <p>Expert guidance on business formation, mergers, acquisitions, contracts, and corporate governance matters.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">👨‍⚖️</div>
+                    <h3>Civil Litigation</h3>
+                    <p>Aggressive representation in complex commercial disputes, personal injury, and civil rights cases.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">🏠</div>
+                    <h3>Real Estate Law</h3>
+                    <p>Comprehensive services for property transactions, zoning, development, and real estate disputes.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">👨‍👩‍👧</div>
+                    <h3>Family Law</h3>
+                    <p>Compassionate counsel for divorce, custody, support, adoption, and prenuptial agreements.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">⚡</div>
+                    <h3>Criminal Defense</h3>
+                    <p>Vigorous defense for clients facing criminal charges, from misdemeanors to serious felonies.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">📄</div>
+                    <h3>Estate Planning</h3>
+                    <p>Strategic planning for wills, trusts, probate, and wealth preservation for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Cases Won</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">$500M+</div>
+                    <div class="stat-label">Recovered for Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="attorneys" id="attorneys">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Attorneys</h2>
+                <p class="section-subtitle">Meet Our Experienced Legal Team</p>
+            </div>
+
+            <div class="attorneys-grid">
+                <div class="attorney-card">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&q=80&auto=format" alt="Robert Sterling - Senior Partner specializing in Corporate and Business Law" class="attorney-photo" loading="lazy" width="400" height="400">
+                    <h3>Robert Sterling</h3>
+                    <p class="attorney-title">Senior Partner</p>
+                    <p class="attorney-speciality">Corporate & Business Law</p>
+                </div>
+
+                <div class="attorney-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80&auto=format" alt="Jennifer Morrison - Managing Partner specializing in Civil Litigation" class="attorney-photo" loading="lazy" width="400" height="400">
+                    <h3>Jennifer Morrison</h3>
+                    <p class="attorney-title">Managing Partner</p>
+                    <p class="attorney-speciality">Civil Litigation</p>
+                </div>
+
+                <div class="attorney-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format" alt="William Harrison - Partner specializing in Criminal Defense" class="attorney-photo" loading="lazy" width="400" height="400">
+                    <h3>William Harrison</h3>
+                    <p class="attorney-title">Partner</p>
+                    <p class="attorney-speciality">Criminal Defense</p>
+                </div>
+
+                <div class="attorney-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80&auto=format" alt="Katherine Adams - Partner specializing in Family Law" class="attorney-photo" loading="lazy" width="400" height="400">
+                    <h3>Katherine Adams</h3>
+                    <p class="attorney-title">Partner</p>
+                    <p class="attorney-speciality">Family Law</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What Our Clients Say</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Sterling & Associates represented our company in a complex merger. Their expertise and professionalism were outstanding. They navigated every challenge with skill and delivered excellent results."</p>
+                    <p class="testimonial-author">Michael Chen</p>
+                    <p class="testimonial-case">CEO, TechVentures Inc.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"After my accident, I didn't know where to turn. The team at Sterling & Associates fought tirelessly for me and secured a settlement that exceeded my expectations. I'm forever grateful."</p>
+                    <p class="testimonial-author">Sarah Martinez</p>
+                    <p class="testimonial-case">Personal Injury Client</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Going through a divorce was the hardest time of my life. Katherine Adams handled my case with compassion and expertise, always putting my children's interests first. Highly recommend."</p>
+                    <p class="testimonial-author">David Thompson</p>
+                    <p class="testimonial-case">Family Law Client</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Facing criminal charges was terrifying, but William Harrison's defense strategy was brilliant. His knowledge and dedication resulted in a complete dismissal of all charges. Outstanding attorney."</p>
+                    <p class="testimonial-author">James Rodriguez</p>
+                    <p class="testimonial-case">Criminal Defense Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Schedule Your Free Consultation</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Office Location</h4>
+                            <p>1500 Law Plaza, Suite 2000<br>New York, NY 10005</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) LAW-FIRM<br>Available 24/7 for emergencies</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>contact@sterlinglaw.com<br>We respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-text">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select>
+                        <option>Legal Service Needed</option>
+                        <option>Corporate Law</option>
+                        <option>Civil Litigation</option>
+                        <option>Real Estate Law</option>
+                        <option>Family Law</option>
+                        <option>Criminal Defense</option>
+                        <option>Estate Planning</option>
+                        <option>Other</option>
+                    </select>
+                    <textarea rows="6" placeholder="Briefly describe your legal issue..."></textarea>
+                    <button type="submit" class="submit-btn">Request Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Back to Portfolio</a>
+        <p style="margin-top: 30px; letter-spacing: 1px;">&copy; 2026 Sterling & Associates Law Firm. All rights reserved.</p>
+        <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.6;">Portfolio example by WebDev Pro</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeProperty | Luxury Real Estate</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover luxury real estate properties in prime locations. Browse featured homes, villas, and estates with PrimeProperty - your trusted partner in finding dream homes.">
+    <meta name="keywords" content="luxury real estate, luxury homes, property for sale, Beverly Hills real estate, Miami Beach property, Manhattan penthouses, luxury villas, real estate agents">
+    <meta name="author" content="PrimeProperty Real Estate">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PrimeProperty | Luxury Real Estate">
+    <meta property="og:description" content="Discover luxury real estate properties in prime locations. Find your dream home with expert guidance from our experienced agents.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primeproperty.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80&auto=format">
+    <meta property="og:site_name" content="PrimeProperty">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PrimeProperty | Luxury Real Estate">
+    <meta name="twitter:description" content="Discover luxury real estate properties in prime locations. Find your dream home with PrimeProperty.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80&auto=format">
+    
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1e3a8a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80&auto=format') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .search-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .search-box input,
+        .search-box select {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            padding: 15px 40px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #1e40af;
+        }
+
+        /* Featured Properties */
+        .featured {
+            padding: 100px 30px;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #64748b;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .property-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .property-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #1e3a8a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .property-content {
+            padding: 30px;
+        }
+
+        .property-price {
+            font-size: 2em;
+            color: #1e3a8a;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .property-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .property-location {
+            color: #64748b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .property-features {
+            display: flex;
+            gap: 25px;
+            padding: 20px 0;
+            border-top: 1px solid #e5e7eb;
+            color: #475569;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Services */
+        .services {
+            padding: 100px 30px;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .service-box {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .service-box:hover {
+            border-color: #1e3a8a;
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            color: #60a5fa;
+        }
+
+        .service-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .service-box p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        /* Stats */
+        .stats {
+            background: #1e3a8a;
+            padding: 80px 30px;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #60a5fa;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Agents */
+        .agents {
+            padding: 100px 30px;
+            background: #f8fafc;
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .agent-card {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .agent-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #60a5fa;
+        }
+
+        .agent-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .agent-role {
+            color: #1e3a8a;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .agent-contact {
+            color: #64748b;
+            font-size: 0.95em;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 100px 30px;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            padding: 40px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-icon {
+            font-size: 2em;
+            color: #1e3a8a;
+        }
+
+        .info-text h3 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .info-text p {
+            color: #64748b;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 14px 35px;
+            background: #1e3a8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #1e40af;
+        }
+
+        /* Tablet Breakpoint - 992px */
+        @media (max-width: 992px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+
+            .hero-content p {
+                font-size: 1.3em;
+            }
+
+            .search-box {
+                padding: 25px;
+                gap: 15px;
+            }
+
+            .properties-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .agents-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+        }
+
+        /* Mobile Breakpoint - 768px */
+        @media (max-width: 768px) {
+            /* Navigation - Hide menu, show mobile-friendly layout */
+            nav .container {
+                padding: 0 15px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            /* Hero Section */
+            .hero {
+                height: 100vh;
+                padding: 0 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+
+            .hero-content p {
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+
+            /* Search Box - Stack vertically, full-width buttons */
+            .search-box {
+                flex-direction: column;
+                padding: 20px;
+                gap: 12px;
+                max-width: 100%;
+            }
+
+            .search-box input,
+            .search-box select {
+                width: 100%;
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .search-btn {
+                width: 100%;
+                padding: 14px;
+                font-size: 16px;
+            }
+
+            /* Section Spacing */
+            .featured,
+            .services,
+            .agents,
+            .contact {
+                padding: 60px 15px;
+            }
+
+            .stats {
+                padding: 50px 15px;
+            }
+
+            /* Typography */
+            .section-title {
+                font-size: 2em;
+                margin-bottom: 10px;
+            }
+
+            .section-subtitle {
+                font-size: 1em;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            /* Property Cards - Single column, optimized layout */
+            .properties-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .property-card {
+                margin: 0 auto;
+                max-width: 500px;
+            }
+
+            .property-image {
+                height: 250px;
+            }
+
+            .property-badge {
+                top: 15px;
+                right: 15px;
+                padding: 6px 16px;
+                font-size: 12px;
+            }
+
+            .property-content {
+                padding: 20px;
+            }
+
+            .property-price {
+                font-size: 1.6em;
+                margin-bottom: 12px;
+            }
+
+            .property-title {
+                font-size: 1.3em;
+                margin-bottom: 12px;
+            }
+
+            .property-location {
+                font-size: 0.95em;
+                margin-bottom: 15px;
+            }
+
+            .property-features {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 15px 0;
+                font-size: 0.9em;
+            }
+
+            /* Services - Single column */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .service-box {
+                padding: 30px 20px;
+            }
+
+            .service-icon {
+                font-size: 3em;
+                margin-bottom: 20px;
+            }
+
+            .service-box h3 {
+                font-size: 1.3em;
+                margin-bottom: 12px;
+            }
+
+            /* Stats - Two columns */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+                margin-bottom: 8px;
+            }
+
+            .stat-label {
+                font-size: 0.95em;
+            }
+
+            /* Agents - Single column */
+            .agents-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .agent-card {
+                padding: 25px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .agent-photo {
+                width: 120px;
+                height: 120px;
+                border-width: 3px;
+            }
+
+            .agent-card h3 {
+                font-size: 1.2em;
+            }
+
+            .agent-role {
+                font-size: 0.95em;
+            }
+
+            .agent-contact {
+                font-size: 0.9em;
+            }
+
+            /* Contact - Single column */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info {
+                padding: 30px 20px;
+            }
+
+            .info-item {
+                margin-bottom: 25px;
+                gap: 15px;
+            }
+
+            .info-icon {
+                font-size: 1.6em;
+            }
+
+            .info-text h3 {
+                font-size: 1.1em;
+            }
+
+            .info-text p {
+                font-size: 0.95em;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .submit-btn {
+                padding: 16px;
+                font-size: 16px;
+            }
+
+            /* Footer */
+            footer {
+                padding: 40px 15px;
+            }
+
+            .back-link {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+        }
+
+        /* Small Mobile Breakpoint - 480px */
+        @media (max-width: 480px) {
+            /* Navigation */
+            nav {
+                padding: 15px 0;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            /* Hero Section - Compact for small screens */
+            .hero-content h1 {
+                font-size: 2em;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1em;
+                margin-bottom: 25px;
+            }
+
+            .search-box {
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .search-box input,
+            .search-box select {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .search-btn {
+                padding: 12px;
+                font-size: 15px;
+            }
+
+            /* Sections - Tighter spacing */
+            .featured,
+            .services,
+            .agents,
+            .contact {
+                padding: 50px 12px;
+            }
+
+            .stats {
+                padding: 40px 12px;
+            }
+
+            /* Typography - Smaller fonts */
+            .section-title {
+                font-size: 1.7em;
+            }
+
+            .section-subtitle {
+                font-size: 0.95em;
+            }
+
+            /* Property Cards - Optimized for small screens */
+            .properties-grid {
+                gap: 20px;
+            }
+
+            .property-image {
+                height: 220px;
+            }
+
+            .property-content {
+                padding: 18px;
+            }
+
+            .property-price {
+                font-size: 1.4em;
+            }
+
+            .property-title {
+                font-size: 1.15em;
+            }
+
+            .property-location {
+                font-size: 0.9em;
+            }
+
+            .property-features {
+                gap: 12px;
+                font-size: 0.85em;
+            }
+
+            /* Services */
+            .service-box {
+                padding: 25px 15px;
+            }
+
+            .service-icon {
+                font-size: 2.5em;
+            }
+
+            .service-box h3 {
+                font-size: 1.2em;
+            }
+
+            .service-box p {
+                font-size: 0.95em;
+            }
+
+            /* Stats - Single column on very small screens */
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .stat-number {
+                font-size: 2.2em;
+            }
+
+            .stat-label {
+                font-size: 0.9em;
+            }
+
+            /* Agents */
+            .agent-card {
+                padding: 20px;
+            }
+
+            .agent-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .agent-card h3 {
+                font-size: 1.1em;
+            }
+
+            /* Contact */
+            .contact-grid {
+                gap: 30px;
+            }
+
+            .contact-info {
+                padding: 25px 15px;
+            }
+
+            .info-item {
+                margin-bottom: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-icon {
+                font-size: 1.8em;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            /* Footer */
+            footer {
+                padding: 35px 12px;
+                font-size: 0.9em;
+            }
+
+            .back-link {
+                padding: 10px 24px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Prime<span>Property</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Properties</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#agents">Agents</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Find Your Dream Home</h1>
+            <p>Discover luxury properties in prime locations</p>
+            <div class="search-box">
+                <input type="text" placeholder="Location">
+                <select>
+                    <option>Property Type</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Condo</option>
+                </select>
+                <select>
+                    <option>Price Range</option>
+                    <option>$0 - $500k</option>
+                    <option>$500k - $1M</option>
+                    <option>$1M - $2M</option>
+                    <option>$2M+</option>
+                </select>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-subtitle">Handpicked properties for discerning buyers</p>
+            </div>
+
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format" alt="Modern luxury villa in Beverly Hills with contemporary architecture and premium finishes" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">Featured</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$2,450,000</div>
+                        <h3 class="property-title">Modern Luxury Villa</h3>
+                        <p class="property-location">📍 Beverly Hills, CA</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 5 Beds</span>
+                            <span class="feature">🚿 4 Baths</span>
+                            <span class="feature">📐 4,200 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&auto=format" alt="Waterfront estate in Miami Beach with stunning ocean views and private beach access" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">New</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$1,850,000</div>
+                        <h3 class="property-title">Waterfront Estate</h3>
+                        <p class="property-location">📍 Miami Beach, FL</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 4 Beds</span>
+                            <span class="feature">🚿 3 Baths</span>
+                            <span class="feature">📐 3,800 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format" alt="Contemporary mansion in Malibu with panoramic coastal views and modern luxury amenities" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">Hot</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$3,200,000</div>
+                        <h3 class="property-title">Contemporary Mansion</h3>
+                        <p class="property-location">📍 Malibu, CA</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 6 Beds</span>
+                            <span class="feature">🚿 5 Baths</span>
+                            <span class="feature">📐 5,500 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80&auto=format" alt="Urban penthouse in Manhattan with skyline views and upscale city living" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">Featured</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$1,650,000</div>
+                        <h3 class="property-title">Urban Penthouse</h3>
+                        <p class="property-location">📍 Manhattan, NY</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 3 Beds</span>
+                            <span class="feature">🚿 3 Baths</span>
+                            <span class="feature">📐 2,900 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=800&q=80&auto=format" alt="Mountain retreat in Aspen with alpine views and ski-in ski-out luxury access" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">New</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$2,100,000</div>
+                        <h3 class="property-title">Mountain Retreat</h3>
+                        <p class="property-location">📍 Aspen, CO</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 5 Beds</span>
+                            <span class="feature">🚿 4 Baths</span>
+                            <span class="feature">📐 4,000 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80&auto=format" alt="Designer home in Austin with modern custom interior and high-end architectural design" class="property-image" loading="lazy" width="800" height="600">
+                        <span class="property-badge">Featured</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">$1,950,000</div>
+                        <h3 class="property-title">Designer Home</h3>
+                        <p class="property-location">📍 Austin, TX</p>
+                        <div class="property-features">
+                            <span class="feature">🛏️ 4 Beds</span>
+                            <span class="feature">🚿 3 Baths</span>
+                            <span class="feature">📐 3,600 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$3.2B+</div>
+                    <div class="stat-label">Total Value</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4,000+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate solutions</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon">🏡</div>
+                    <h3>Buy Property</h3>
+                    <p>Expert guidance through every step of purchasing your perfect home with exclusive market access.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">💰</div>
+                    <h3>Sell Property</h3>
+                    <p>Strategic marketing and pricing to maximize your property's value and minimize time on market.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">🔑</div>
+                    <h3>Property Management</h3>
+                    <p>Full-service property management for hassle-free rental income and property maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="agents" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Expert agents dedicated to your success</p>
+            </div>
+
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format" alt="James Anderson - Senior Broker at PrimeProperty Real Estate" class="agent-photo" loading="lazy" width="400" height="400">
+                    <h3>James Anderson</h3>
+                    <p class="agent-role">Senior Broker</p>
+                    <p class="agent-contact">james@primeproperty.com</p>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format" alt="Sarah Mitchell - Luxury Property Specialist at PrimeProperty Real Estate" class="agent-photo" loading="lazy" width="400" height="400">
+                    <h3>Sarah Mitchell</h3>
+                    <p class="agent-role">Luxury Specialist</p>
+                    <p class="agent-contact">sarah@primeproperty.com</p>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format" alt="Michael Chen - Real Estate Investment Advisor at PrimeProperty" class="agent-photo" loading="lazy" width="400" height="400">
+                    <h3>Michael Chen</h3>
+                    <p class="agent-role">Investment Advisor</p>
+                    <p class="agent-contact">michael@primeproperty.com</p>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80&auto=format" alt="Emily Rodriguez - Residential Real Estate Expert at PrimeProperty" class="agent-photo" loading="lazy" width="400" height="400">
+                    <h3>Emily Rodriguez</h3>
+                    <p class="agent-role">Residential Expert</p>
+                    <p class="agent-contact">emily@primeproperty.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Let's discuss your real estate needs</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Visit Us</h3>
+                            <p>789 Luxury Avenue<br>Los Angeles, CA 90210</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) PRIME-RE<br>Available 24/7</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h3>Email Us</h3>
+                            <p>info@primeproperty.com<br>Quick response guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select style="width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px;">
+                        <option>I'm interested in...</option>
+                        <option>Buying</option>
+                        <option>Selling</option>
+                        <option>Renting</option>
+                        <option>Property Management</option>
+                    </select>
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        <p style="margin-top: 25px;">&copy; 2026 PrimeProperty Real Estate. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.6;">Portfolio example by WebDev Pro</p>
+    </footer>
+</body>
+</html>

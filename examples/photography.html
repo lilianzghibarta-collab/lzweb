@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Hart | Photography</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Alexander Hart - Fine art and commercial photographer based in NYC. Specializing in fashion, portrait, editorial, and wedding photography. Featured in Vogue, Harper's Bazaar, and The New York Times.">
+    <meta name="keywords" content="photography, photographer, NYC photographer, fashion photography, portrait photography, editorial photography, wedding photography, commercial photography, fine art photography, Alexander Hart">
+    <meta name="author" content="Alexander Hart">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alexander Hart | Photography">
+    <meta property="og:description" content="Fine art and commercial photographer based in NYC. Capturing moments that matter through fashion, portrait, and editorial photography.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexanderhart.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&q=80&auto=format">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alexander Hart | Photography">
+    <meta name="twitter:description" content="Fine art and commercial photographer based in NYC. Capturing moments that matter through fashion, portrait, and editorial photography.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&q=80&auto=format">
+    
+    <!-- Preconnect Hints -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Futura', 'Century Gothic', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #000000;
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 300;
+            color: white;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1600&q=80&auto=format') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            letter-spacing: 5px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+
+        /* About */
+        .about {
+            padding: 150px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 3em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .about p {
+            font-size: 1.15em;
+            line-height: 2;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            padding: 0;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            padding: 100px 40px;
+            background: #f5f5f5;
+        }
+
+        .portfolio-header h2 {
+            font-size: 3.5em;
+            font-weight: 300;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            color: white;
+            font-size: 1.3em;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Services */
+        .services {
+            padding: 150px 40px;
+            background: #000000;
+            color: white;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 80px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 40px;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: #fff;
+        }
+
+        .service-item h3 {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .service-item p {
+            color: #999;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 150px 40px;
+            background: #f5f5f5;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 80px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+
+        .testimonial-box {
+            padding: 50px;
+            background: white;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 1.1em;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 150px 40px;
+            background: #000000;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+            color: #999;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            border-top: 1px solid #222;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 15px 40px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Tablet Devices (992px and below) */
+        @media (max-width: 992px) {
+            nav .container {
+                padding: 0 30px;
+            }
+
+            .logo {
+                font-size: 20px;
+                letter-spacing: 6px;
+            }
+
+            nav ul {
+                gap: 35px;
+            }
+
+            nav a {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 4em;
+                letter-spacing: 12px;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+                letter-spacing: 4px;
+            }
+
+            .about,
+            .services,
+            .testimonials,
+            .contact {
+                padding: 100px 30px;
+            }
+
+            .about h2,
+            .portfolio-header h2,
+            .services h2,
+            .testimonials h2,
+            .contact h2 {
+                font-size: 3em;
+                letter-spacing: 8px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Mobile Devices (768px and below) */
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+                letter-spacing: 4px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+                letter-spacing: 8px;
+            }
+
+            .hero p {
+                font-size: 1em;
+                letter-spacing: 3px;
+            }
+
+            .about,
+            .services,
+            .testimonials,
+            .contact {
+                padding: 80px 20px;
+            }
+
+            .about h2,
+            .portfolio-header h2,
+            .services h2,
+            .testimonials h2,
+            .contact h2 {
+                font-size: 2.5em;
+                letter-spacing: 6px;
+                margin-bottom: 40px;
+            }
+
+            .about p {
+                font-size: 1.05em;
+                line-height: 1.8;
+            }
+
+            .portfolio-header {
+                padding: 80px 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .gallery-item {
+                aspect-ratio: 4/3;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .overlay-text {
+                font-size: 1.2em;
+                letter-spacing: 3px;
+            }
+
+            .services h2 {
+                margin-bottom: 60px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .service-item {
+                padding: 30px;
+            }
+
+            .service-item h3 {
+                font-size: 1.3em;
+                letter-spacing: 3px;
+            }
+
+            .service-item p {
+                font-size: 0.95em;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .testimonial-box {
+                padding: 35px 25px;
+            }
+
+            .testimonial-text {
+                font-size: 1em;
+                line-height: 1.7;
+            }
+
+            .testimonial-author {
+                font-size: 0.85em;
+            }
+
+            .contact h2 {
+                font-size: 2.2em;
+            }
+
+            .contact p {
+                font-size: 1em;
+                letter-spacing: 2px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .contact-link {
+                display: block;
+                width: 100%;
+                max-width: 280px;
+                padding: 15px 0;
+                text-align: center;
+            }
+
+            .back-link {
+                display: block;
+                width: 100%;
+                max-width: 280px;
+                padding: 15px 0;
+                text-align: center;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+        }
+
+        /* Small Mobile Devices (480px and below) */
+        @media (max-width: 480px) {
+            nav .container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+                letter-spacing: 5px;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+                letter-spacing: 2px;
+            }
+
+            .about,
+            .services,
+            .testimonials,
+            .contact {
+                padding: 60px 15px;
+            }
+
+            .about h2,
+            .portfolio-header h2,
+            .services h2,
+            .testimonials h2,
+            .contact h2 {
+                font-size: 2em;
+                letter-spacing: 4px;
+                margin-bottom: 30px;
+            }
+
+            .about p {
+                font-size: 1em;
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+
+            .portfolio-header {
+                padding: 60px 15px;
+            }
+
+            .gallery-item {
+                aspect-ratio: 1;
+            }
+
+            .overlay-text {
+                font-size: 1em;
+                letter-spacing: 2px;
+            }
+
+            .services h2 {
+                margin-bottom: 40px;
+            }
+
+            .services-grid {
+                gap: 20px;
+            }
+
+            .service-item {
+                padding: 25px 20px;
+            }
+
+            .service-item h3 {
+                font-size: 1.2em;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+            }
+
+            .service-item p {
+                font-size: 0.9em;
+                line-height: 1.6;
+            }
+
+            .testimonials-grid {
+                gap: 20px;
+            }
+
+            .testimonial-box {
+                padding: 30px 20px;
+            }
+
+            .testimonial-text {
+                font-size: 0.95em;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+
+            .testimonial-author {
+                font-size: 0.8em;
+            }
+
+            .contact h2 {
+                font-size: 1.8em;
+                letter-spacing: 3px;
+            }
+
+            .contact p {
+                font-size: 0.9em;
+                letter-spacing: 1px;
+                margin-bottom: 40px;
+            }
+
+            .contact-links {
+                gap: 20px;
+            }
+
+            .contact-link {
+                max-width: 240px;
+                padding: 12px 0;
+                font-size: 1em;
+            }
+
+            .back-link {
+                max-width: 240px;
+                padding: 12px 0;
+                font-size: 11px;
+            }
+
+            footer {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Alexander Hart</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Vision</h1>
+            <p>Capturing Moments That Matter</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>I'm Alexander Hart, a fine art and commercial photographer based in New York City. For over a decade, I've been dedicated to capturing the essence of life through my lens.</p>
+        <p>My work spans fashion, portraiture, and editorial photography, with a focus on creating timeless images that tell compelling stories. Each photograph is crafted with attention to light, composition, and emotion.</p>
+        <p>My portfolio has been featured in Vogue, Harper's Bazaar, and The New York Times. I work with both emerging and established brands to create visual narratives that resonate.</p>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-header">
+            <h2>Portfolio</h2>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80&auto=format" alt="Professional portrait photography showcasing elegant fashion and mood lighting" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Portrait</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80&auto=format" alt="High-end fashion photography with dramatic landscape and model composition" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Fashion</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80&auto=format" alt="Beautiful wedding photography capturing intimate moments and elegant celebrations" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Wedding</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80&auto=format" alt="Editorial photography featuring creative storytelling and artistic model portraiture" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Editorial</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80&auto=format" alt="Beauty photography with professional makeup and stunning natural lighting techniques" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Beauty</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80&auto=format" alt="Commercial photography for brands with professional male model and clean aesthetic" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Commercial</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80&auto=format" alt="Lifestyle photography capturing authentic moments and natural beauty in outdoor settings" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Lifestyle</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80&auto=format" alt="Studio portrait photography with professional lighting and elegant female model composition" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Studio</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format" alt="Creative portrait photography with artistic vision and contemporary male model styling" width="800" height="800" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="overlay-text">Creative</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2>Services</h2>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Portrait</h3>
+                    <p>Professional portraits that capture personality and character. Perfect for personal branding, corporate headshots, and artistic expressions.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Fashion</h3>
+                    <p>High-end fashion photography for editorial campaigns, lookbooks, and brand catalogs. Collaborating with designers and stylists worldwide.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Commercial</h3>
+                    <p>Strategic visual content for brands and businesses. From product photography to advertising campaigns that drive results.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Editorial</h3>
+                    <p>Storytelling through imagery for magazines, publications, and digital media. Creating narratives that engage and inspire.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Wedding</h3>
+                    <p>Documenting your special day with an artistic eye. Timeless images that preserve emotions and moments forever.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Fine Art</h3>
+                    <p>Limited edition prints and gallery exhibitions. Conceptual work that explores themes of humanity, nature, and existence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>Testimonials</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"Alexander's eye for detail and ability to capture emotion is unmatched. The images he created for our campaign exceeded all expectations."</p>
+                    <p class="testimonial-author">— Sarah Chen, Creative Director at Vogue</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"Working with Alexander was an absolute pleasure. His professionalism and artistic vision brought our brand story to life in ways we never imagined."</p>
+                    <p class="testimonial-author">— Michael Rodriguez, CEO of Luxe Fashion</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"The wedding photos are breathtaking. Alexander captured every moment perfectly, and we'll treasure these images forever."</p>
+                    <p class="testimonial-author">— Jennifer & David Thompson</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"A true artist with a camera. Alexander's work is consistently stunning and his collaborative approach makes every shoot enjoyable."</p>
+                    <p class="testimonial-author">— Emma Wilson, Fashion Stylist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Create</h2>
+        <p>Available for commissions and collaborations worldwide</p>
+        
+        <div class="contact-links">
+            <a href="mailto:alex@alexanderhart.com" class="contact-link">Email</a>
+            <a href="tel:+15551234567" class="contact-link">Phone</a>
+            <a href="#" class="contact-link">Instagram</a>
+        </div>
+
+        <p style="font-size: 0.9em; margin-top: 50px;">Based in New York City | Available for Travel</p>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Back to Portfolio</a>
+        <p style="margin-top: 30px; letter-spacing: 2px; font-size: 0.9em;">&copy; 2026 Alexander Hart Photography. All Rights Reserved.</p>
+        <p style="margin-top: 15px; font-size: 0.85em; opacity: 0.5;">Portfolio example by WebDev Pro</p>
+    </footer>
+</body>
+</html>

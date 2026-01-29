@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn Academy | Online Education Platform</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="TechLearn Academy offers world-class online courses from industry experts. Learn web development, data science, UI/UX design, digital marketing, and more at your own pace. Join 50,000+ students today.">
+    <meta name="keywords" content="online education, online courses, web development, data science, UI/UX design, digital marketing, mobile app development, cloud computing, learn programming, online learning platform, tech courses, coding bootcamp">
+    <meta name="author" content="TechLearn Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TechLearn Academy | Online Education Platform">
+    <meta property="og:description" content="Access 500+ courses from industry experts. Learn web development, data science, design, and more. Join 50,000+ students learning at their own pace.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format">
+    <meta property="og:url" content="https://techlearn-academy.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TechLearn Academy">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TechLearn Academy | Online Education Platform">
+    <meta name="twitter:description" content="Access 500+ courses from industry experts. Learn web development, data science, design, and more. Join 50,000+ students.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format">
+    
+    <!-- Preconnect Hints -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 180px 30px 120px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: #10b981;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Features */
+        .features {
+            padding: 100px 30px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #1f2937;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #6b7280;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 40px;
+            background: #f9fafb;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #059669;
+        }
+
+        .feature-box p {
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        /* Courses */
+        .courses {
+            padding: 100px 30px;
+            background: #f9fafb;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 30px;
+        }
+
+        .course-category {
+            display: inline-block;
+            padding: 6px 15px;
+            background: #d1fae5;
+            color: #059669;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .course-desc {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .course-price {
+            font-size: 1.8em;
+            color: #10b981;
+            font-weight: 700;
+        }
+
+        .course-rating {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+
+        /* Instructors */
+        .instructors {
+            padding: 100px 30px;
+            background: white;
+        }
+
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .instructor-card {
+            text-align: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .instructor-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #10b981;
+        }
+
+        .instructor-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .instructor-role {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .instructor-students {
+            color: #6b7280;
+            font-size: 0.95em;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 30px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .testimonials .section-title {
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 30px;
+            background: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 3em;
+            margin-bottom: 25px;
+            color: #1f2937;
+            font-weight: 800;
+        }
+
+        .cta p {
+            font-size: 1.3em;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 100px 30px;
+            background: #f9fafb;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 60px auto 0;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 14px 35px;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #059669;
+            transform: scale(1.05);
+        }
+
+        /* Tablet Devices */
+        @media (max-width: 992px) {
+            nav .container {
+                padding: 0 20px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            nav ul {
+                gap: 25px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2em;
+            }
+            
+            .hero p {
+                font-size: 1.2em;
+            }
+            
+            .hero-stats {
+                gap: 50px;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+            
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .instructors-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Mobile Devices */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            nav .container {
+                padding: 0 20px;
+            }
+            
+            .logo {
+                font-size: 22px;
+            }
+            
+            .logo span {
+                font-size: 26px;
+            }
+            
+            .hero {
+                padding: 140px 20px 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2em;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                padding: 16px 35px;
+                font-size: 16px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.5em;
+            }
+            
+            .stat-label {
+                font-size: 1em;
+            }
+            
+            .features,
+            .courses,
+            .instructors,
+            .testimonials,
+            .cta,
+            .contact {
+                padding: 60px 20px;
+            }
+            
+            .section-title {
+                font-size: 2.2em;
+            }
+            
+            .section-subtitle {
+                font-size: 1.05em;
+                margin-bottom: 40px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .feature-box {
+                padding: 30px 25px;
+            }
+            
+            .feature-icon {
+                font-size: 3em;
+                margin-bottom: 15px;
+            }
+            
+            .feature-box h3 {
+                font-size: 1.4em;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .course-card {
+                margin: 0 auto;
+                max-width: 500px;
+            }
+            
+            .course-image {
+                height: 180px;
+            }
+            
+            .course-content {
+                padding: 25px;
+            }
+            
+            .course-title {
+                font-size: 1.35em;
+            }
+            
+            .course-footer {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .course-price {
+                font-size: 1.6em;
+            }
+            
+            .instructors-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .instructor-card {
+                max-width: 400px;
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            .instructor-img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .testimonial-card {
+                padding: 30px 25px;
+            }
+            
+            .testimonial-text {
+                font-size: 1.05em;
+            }
+            
+            .author-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .cta h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta p {
+                font-size: 1.1em;
+            }
+            
+            .contact-form {
+                padding: 35px 25px;
+            }
+            
+            .submit-btn {
+                padding: 16px;
+                font-size: 16px;
+            }
+            
+            footer {
+                padding: 40px 20px;
+            }
+            
+            .back-link {
+                padding: 12px 30px;
+                font-size: 15px;
+            }
+        }
+        
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .logo span {
+                font-size: 24px;
+            }
+            
+            .hero {
+                padding: 120px 15px 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 1em;
+            }
+            
+            .hero-btn {
+                padding: 14px 30px;
+                font-size: 15px;
+            }
+            
+            .stat-number {
+                font-size: 2em;
+            }
+            
+            .stat-label {
+                font-size: 0.9em;
+            }
+            
+            .features,
+            .courses,
+            .instructors,
+            .testimonials,
+            .cta,
+            .contact {
+                padding: 50px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95em;
+            }
+            
+            .feature-box {
+                padding: 25px 20px;
+            }
+            
+            .feature-icon {
+                font-size: 2.5em;
+            }
+            
+            .feature-box h3 {
+                font-size: 1.25em;
+            }
+            
+            .feature-box p {
+                font-size: 0.95em;
+            }
+            
+            .course-image {
+                height: 160px;
+            }
+            
+            .course-content {
+                padding: 20px;
+            }
+            
+            .course-category {
+                padding: 5px 12px;
+                font-size: 13px;
+            }
+            
+            .course-title {
+                font-size: 1.2em;
+            }
+            
+            .course-desc {
+                font-size: 0.95em;
+            }
+            
+            .course-price {
+                font-size: 1.5em;
+            }
+            
+            .course-rating {
+                font-size: 0.9em;
+            }
+            
+            .instructor-card {
+                padding: 25px 20px;
+            }
+            
+            .instructor-img {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .instructor-card h3 {
+                font-size: 1.15em;
+            }
+            
+            .instructor-role,
+            .instructor-students {
+                font-size: 0.9em;
+            }
+            
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+            
+            .testimonial-text {
+                font-size: 0.95em;
+            }
+            
+            .author-img {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .author-info h4 {
+                font-size: 1em;
+            }
+            
+            .author-info p {
+                font-size: 0.85em;
+            }
+            
+            .cta h2 {
+                font-size: 1.8em;
+            }
+            
+            .cta p {
+                font-size: 1em;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form select {
+                padding: 13px;
+                font-size: 15px;
+            }
+            
+            .submit-btn {
+                padding: 14px;
+                font-size: 15px;
+            }
+            
+            .back-link {
+                padding: 10px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo"><span>🎓</span> TechLearn</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#instructors">Instructors</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Learn Skills for Your Future</h1>
+        <p>Access world-class courses from industry experts anywhere, anytime</p>
+        <a href="#courses" class="hero-btn">Browse Courses</a>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Courses</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Instructors</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose TechLearn</h2>
+            <p class="section-subtitle">Everything you need to succeed in your learning journey</p>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">💻</div>
+                    <h3>Learn at Your Pace</h3>
+                    <p>Access courses anytime, anywhere. Study at your own speed and fit learning into your schedule.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Certificates</h3>
+                    <p>Earn recognized certificates upon completion to showcase your skills to employers.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with years of real-world experience.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Practical Projects</h3>
+                    <p>Build your portfolio with hands-on projects that mirror real industry challenges.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">💬</div>
+                    <h3>Community Support</h3>
+                    <p>Join a vibrant community of learners and get help when you need it.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Learning</h3>
+                    <p>Learn on-the-go with our mobile app. Download lessons for offline access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <p class="section-subtitle">Start learning with our most popular courses</p>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format" alt="Web Development Bootcamp course showing laptop with code editor displaying HTML, CSS, and JavaScript" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">Development</span>
+                        <h3 class="course-title">Complete Web Development Bootcamp</h3>
+                        <p class="course-desc">Master HTML, CSS, JavaScript, React, Node.js and more</p>
+                        <div class="course-footer">
+                            <div class="course-price">$49</div>
+                            <div class="course-rating">⭐ 4.9 (12K)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80&auto=format" alt="Python Data Science and Machine Learning course with code and data visualization on computer screen" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">Data Science</span>
+                        <h3 class="course-title">Python for Data Science & ML</h3>
+                        <p class="course-desc">Learn Python, NumPy, Pandas, and Machine Learning</p>
+                        <div class="course-footer">
+                            <div class="course-price">$59</div>
+                            <div class="course-rating">⭐ 4.8 (9K)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format" alt="UI/UX Design Masterclass showing Figma and Adobe XD design tools interface with wireframes and mockups" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">Design</span>
+                        <h3 class="course-title">UI/UX Design Masterclass</h3>
+                        <p class="course-desc">Create stunning designs with Figma and Adobe XD</p>
+                        <div class="course-footer">
+                            <div class="course-price">$39</div>
+                            <div class="course-rating">⭐ 4.9 (7K)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format" alt="Digital Marketing Pro course with analytics dashboard showing SEO and social media metrics" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">Business</span>
+                        <h3 class="course-title">Digital Marketing Pro</h3>
+                        <p class="course-desc">Master SEO, social media, and content marketing</p>
+                        <div class="course-footer">
+                            <div class="course-price">$45</div>
+                            <div class="course-rating">⭐ 4.7 (8K)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format" alt="Mobile App Development course with React Native code on screen and smartphone displaying app interface" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">Development</span>
+                        <h3 class="course-title">Mobile App Development</h3>
+                        <p class="course-desc">Build iOS and Android apps with React Native</p>
+                        <div class="course-footer">
+                            <div class="course-price">$55</div>
+                            <div class="course-rating">⭐ 4.8 (6K)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format" alt="Cloud Computing with AWS course showing AWS services dashboard and cloud infrastructure diagrams" class="course-image" width="800" height="600" loading="lazy">
+                    <div class="course-content">
+                        <span class="course-category">IT & Software</span>
+                        <h3 class="course-title">Cloud Computing with AWS</h3>
+                        <p class="course-desc">Become AWS certified and master cloud technologies</p>
+                        <div class="course-footer">
+                            <div class="course-price">$69</div>
+                            <div class="course-rating">⭐ 4.9 (5K)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instructors" id="instructors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Instructors</h2>
+            <p class="section-subtitle">Learn from the best in the industry</p>
+
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="John Davis - Web Development instructor with 25,000 students" class="instructor-img" width="400" height="400" loading="lazy">
+                    <h3>John Davis</h3>
+                    <p class="instructor-role">Web Development</p>
+                    <p class="instructor-students">25,000 students</p>
+                </div>
+
+                <div class="instructor-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format" alt="Sarah Miller - Data Science instructor with 18,500 students" class="instructor-img" width="400" height="400" loading="lazy">
+                    <h3>Sarah Miller</h3>
+                    <p class="instructor-role">Data Science</p>
+                    <p class="instructor-students">18,500 students</p>
+                </div>
+
+                <div class="instructor-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80&auto=format" alt="Michael Chen - UI/UX Design instructor with 22,000 students" class="instructor-img" width="400" height="400" loading="lazy">
+                    <h3>Michael Chen</h3>
+                    <p class="instructor-role">UI/UX Design</p>
+                    <p class="instructor-students">22,000 students</p>
+                </div>
+
+                <div class="instructor-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80&auto=format" alt="Emily Brown - Digital Marketing instructor with 15,800 students" class="instructor-img" width="400" height="400" loading="lazy">
+                    <h3>Emily Brown</h3>
+                    <p class="instructor-role">Digital Marketing</p>
+                    <p class="instructor-students">15,800 students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">See how our courses transformed careers</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"TechLearn helped me transition from teaching to web development. The courses are well-structured and the instructors are amazing. I landed my dream job after 6 months!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format" alt="Jessica Martinez - Junior Developer at Google and TechLearn graduate" class="author-img" width="400" height="400" loading="lazy">
+                        <div class="author-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>Junior Developer at Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The data science course exceeded my expectations. Practical projects and expert guidance helped me build a strong portfolio. Now I'm a data analyst at a Fortune 500 company."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format" alt="Alex Thompson - Data Analyst at Amazon and TechLearn graduate" class="author-img" width="400" height="400" loading="lazy">
+                        <div class="author-info">
+                            <h4>Alex Thompson</h4>
+                            <p>Data Analyst at Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The UI/UX course gave me the skills to start my own design agency. The community support and mentorship were invaluable. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80&auto=format" alt="Rachel Kim - Founder of DesignHub and TechLearn graduate" class="author-img" width="400" height="400" loading="lazy">
+                        <div class="author-info">
+                            <h4>Rachel Kim</h4>
+                            <p>Founder of DesignHub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Best investment I've made in my career. The marketing course taught me practical skills I use every day. My client base has tripled since completing the program."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format" alt="David Lee - Marketing Consultant and TechLearn graduate" class="author-img" width="400" height="400" loading="lazy">
+                        <div class="author-info">
+                            <h4>David Lee</h4>
+                            <p>Marketing Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join thousands of students already learning on TechLearn</p>
+            <a href="#contact" class="hero-btn">Get Started Today</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Have questions? We're here to help!</p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+                <select>
+                    <option>I'm interested in...</option>
+                    <option>Course Information</option>
+                    <option>Become an Instructor</option>
+                    <option>Business/Corporate Training</option>
+                    <option>Technical Support</option>
+                    <option>Other</option>
+                </select>
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        <p style="margin-top: 25px;">&copy; 2026 TechLearn Academy. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.6;">Portfolio example by WebDev Pro</p>
+    </footer>
+</body>
+</html>

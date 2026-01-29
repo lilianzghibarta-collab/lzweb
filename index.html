@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LZ Web Solutions - Professional web development services for restaurants, fitness studios, real estate, photography, education, law firms, medical clinics, and more. Custom websites that drive results.">
+    <meta name="keywords" content="web development, custom websites, responsive design, e-commerce, SEO optimization, professional web design, business websites">
+    <meta name="author" content="LZ Web Solutions">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lzwebsolutions.com/">
+    <meta property="og:title" content="LZ Web Solutions - Custom Websites for Every Business">
+    <meta property="og:description" content="Professional web development services across multiple industries. We create stunning, responsive websites that drive real business results.">
+    <meta property="og:image" content="https://lzwebsolutions.com/lzweb.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lzwebsolutions.com/">
+    <meta property="twitter:title" content="LZ Web Solutions - Custom Websites for Every Business">
+    <meta property="twitter:description" content="Professional web development services across multiple industries. We create stunning, responsive websites that drive real business results.">
+    <meta property="twitter:image" content="https://lzwebsolutions.com/lzweb.png">
+    
+    <title>LZ Web Solutions - Custom Websites for Every Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 2px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav.nav-hidden {
+            transform: translateY(-100%);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 175px;
+            width: 175px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600') center/cover;
+            color: white;
+            padding: 150px 20px 100px;
+            text-align: center;
+            margin-top: 182px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Showcase Section */
+        .showcase {
+            background: white;
+            padding: 100px 20px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .showcase-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .showcase-image:hover::before {
+            opacity: 1;
+        }
+
+        .showcase-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .showcase-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .showcase-image:hover .showcase-label {
+            opacity: 1;
+        }
+
+        /* Services */
+        .services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Examples */
+        .portfolio {
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .portfolio-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+
+        .portfolio-content {
+            padding: 30px;
+        }
+
+        .portfolio-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .portfolio-category {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-item p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        /* Process Section */
+        .process {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .process .section-title,
+        .process .section-subtitle {
+            color: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button-white {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .container {
+                padding: 0 30px;
+            }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1em;
+                margin-bottom: 25px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            nav {
+                padding: 5px 0;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .section-subtitle {
+                font-size: 1em;
+            }
+
+            .portfolio-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
+            .service-icon {
+                font-size: 50px;
+            }
+
+            .portfolio-item {
+                margin-bottom: 10px;
+            }
+
+            .cta-button,
+            .cta-button-white {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* About section mobile */
+            .showcase .container > div[style*="max-width"] {
+                padding: 0 10px;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="padding: 40px"] {
+                padding: 25px 20px !important;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="font-size: 20px"] p {
+                font-size: 16px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="font-size: 18px"] p {
+                font-size: 15px !important;
+            }
+
+            .showcase .container > div[style*="display: grid"] {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="margin-top: 50px"] {
+                margin-top: 30px !important;
+                padding: 25px 20px !important;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="margin-top: 50px"] > div[style*="display: grid"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            .showcase .container > div[style*="max-width"] > div[style*="margin-top: 50px"] h3 {
+                font-size: 20px !important;
+            }
+        }
+
+        /* Responsive - Small Mobile */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            .hero p {
+                font-size: 0.95em;
+            }
+
+            .logo-text {
+                font-size: 16px;
+            }
+
+            .logo img {
+                height: 60px;
+                width: 60px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .cta-button,
+            .cta-button-white {
+                padding: 10px 25px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Contact section mobile */
+            .cta-section .container > div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 25px !important;
+            }
+
+            .cta-section .container > div[style*="display: flex"] a {
+                font-size: 14px !important;
+            }
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="lzweb.png" alt="LZ Web Solutions Logo">
+                <span class="logo-text">LZ Web Solutions</span>
+            </a>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Business with Custom Web Solutions</h1>
+            <p>LZ Web Solutions creates stunning, high-performance websites tailored to your business goals.<br>From concept to launch, we bring your vision to life.</p>
+            <a href="#contact" class="cta-button">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="showcase">
+        <div class="container">
+            <h2 class="section-title">Delivering Excellence Across Industries</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-left: 4px solid #667eea; padding: 40px; border-radius: 12px; margin-bottom: 30px;">
+                    <p style="font-size: 20px; line-height: 1.8; color: #2d3748; margin-bottom: 20px; font-weight: 500;">
+                        At <strong style="color: #667eea;">LZ Web Solutions</strong>, we transform digital visions into reality. With expertise spanning multiple industries, we craft bespoke websites that not only look stunning but drive real business results.
+                    </p>
+                    <p style="font-size: 18px; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+                        Whether you're a <span style="color: #667eea; font-weight: 600;">startup launching your first product</span>, a <span style="color: #764ba2; font-weight: 600;">restaurant attracting diners</span>, or an <span style="color: #667eea; font-weight: 600;">established enterprise</span> expanding your digital footprint—we bring the technical expertise and creative vision to make your project succeed.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px;">
+                    <div style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(102,126,234,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'">
+                        <div style="font-size: 48px; margin-bottom: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">50+</div>
+                        <div style="font-size: 16px; color: #4a5568; font-weight: 600;">Projects Delivered</div>
+                    </div>
+                    <div style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(102,126,234,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'">
+                        <div style="font-size: 48px; margin-bottom: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">15+</div>
+                        <div style="font-size: 16px; color: #4a5568; font-weight: 600;">Industries Served</div>
+                    </div>
+                    <div style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(102,126,234,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'">
+                        <div style="font-size: 48px; margin-bottom: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">100%</div>
+                        <div style="font-size: 16px; color: #4a5568; font-weight: 600;">Client Satisfaction</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 50px; padding: 35px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3 style="color: #2d3748; font-size: 24px; margin-bottom: 20px; text-align: center;">Our Approach</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 25px;">
+                        <div>
+                            <div style="color: #667eea; font-size: 32px; font-weight: 800; margin-bottom: 8px;">01</div>
+                            <div style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Listen & Understand</div>
+                            <div style="color: #718096; font-size: 14px; line-height: 1.6;">We dive deep into your business goals and target audience</div>
+                        </div>
+                        <div>
+                            <div style="color: #667eea; font-size: 32px; font-weight: 800; margin-bottom: 8px;">02</div>
+                            <div style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Design & Prototype</div>
+                            <div style="color: #718096; font-size: 14px; line-height: 1.6;">Create modern, user-friendly designs that align with your brand</div>
+                        </div>
+                        <div>
+                            <div style="color: #667eea; font-size: 32px; font-weight: 800; margin-bottom: 8px;">03</div>
+                            <div style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Build & Optimize</div>
+                            <div style="color: #718096; font-size: 14px; line-height: 1.6;">Develop fast, responsive websites with clean code</div>
+                        </div>
+                        <div>
+                            <div style="color: #667eea; font-size: 32px; font-weight: 800; margin-bottom: 8px;">04</div>
+                            <div style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Launch & Support</div>
+                            <div style="color: #718096; font-size: 14px; line-height: 1.6;">Deploy your site and provide ongoing maintenance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">What I Offer</h2>
+            <p class="section-subtitle">Comprehensive web development solutions customized for your unique needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Landing Pages</h3>
+                    <p>Eye-catching single-page websites designed to convert visitors into customers. Perfect for product launches and marketing campaigns.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Corporate Websites</h3>
+                    <p>Professional multi-page websites that establish your brand presence and showcase your business services effectively.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>E-Commerce</h3>
+                    <p>Full-featured online stores with shopping carts, payment integration, and inventory management systems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first websites that look perfect on all devices - smartphones, tablets, and desktops.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Web Applications</h3>
+                    <p>Custom web apps with advanced functionality, user dashboards, and database integration.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>SEO Optimization</h3>
+                    <p>Search engine optimized websites to help your business rank higher and reach more customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio Examples</h2>
+            <p class="section-subtitle">Websites I can create for different industries and purposes</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" onclick="window.location.href='examples/restaurant.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&q=80&auto=format" alt="Restaurant Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Restaurant & Food</div>
+                        <h3>Restaurant Website</h3>
+                        <p>Online menu, reservation system, gallery, location maps, and customer reviews integration.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Booking System</span>
+                            <span class="tag">Menu Display</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/fitness.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&q=80&auto=format" alt="Fitness Studio Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Health & Fitness</div>
+                        <h3>Fitness Studio</h3>
+                        <p>Class schedules, trainer profiles, membership plans, and online booking system.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Scheduling</span>
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">CMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/wedding.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop&q=80&auto=format" alt="Wedding Planner Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Events & Weddings</div>
+                        <h3>Wedding Planner</h3>
+                        <p>Portfolio gallery, service packages, testimonials, contact forms, and event calendar.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Gallery</span>
+                            <span class="tag">Contact Forms</span>
+                            <span class="tag">Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/realestate.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop&q=80&auto=format" alt="Real Estate Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Real Estate</div>
+                        <h3>Property Listings</h3>
+                        <p>Property search, filters, virtual tours, agent profiles, and lead generation forms.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Search & Filter</span>
+                            <span class="tag">Database</span>
+                            <span class="tag">Forms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/photography.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&h=300&fit=crop&q=80&auto=format" alt="Photography Portfolio Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Creative & Portfolio</div>
+                        <h3>Photography Portfolio</h3>
+                        <p>Stunning image galleries, client proofing, pricing packages, and booking system.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Gallery</span>
+                            <span class="tag">Lightbox</span>
+                            <span class="tag">Contact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/education.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop&q=80&auto=format" alt="Online Education Platform Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Education</div>
+                        <h3>Online Courses</h3>
+                        <p>Course catalog, student enrollment, video integration, progress tracking, and certificates.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">LMS</span>
+                            <span class="tag">User Login</span>
+                            <span class="tag">Payments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/lawfirm.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop&q=80&auto=format" alt="Law Firm Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Professional Services</div>
+                        <h3>Law Firm</h3>
+                        <p>Practice areas, attorney profiles, case results, blog, and consultation booking.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Professional</span>
+                            <span class="tag">Blog</span>
+                            <span class="tag">Booking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/medical.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop&q=80&auto=format" alt="Medical Clinic Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Healthcare</div>
+                        <h3>Medical Clinic</h3>
+                        <p>Services, doctor profiles, appointment scheduling, patient portal, and health resources.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Appointments</span>
+                            <span class="tag">Portal</span>
+                            <span class="tag">HIPAA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="window.location.href='examples/musicband.html'" style="cursor: pointer;">
+                    <div class="portfolio-image"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&h=300&fit=crop&q=80&auto=format" alt="Music Band Website Design" loading="lazy" width="400" height="300" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Entertainment</div>
+                        <h3>Music Band</h3>
+                        <p>Music player, tour dates, merchandise store, video gallery, and fan newsletter.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Audio Player</span>
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">Events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section-title">My Development Process</h2>
+            <p class="section-subtitle">A streamlined approach to bring your vision to life</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We discuss your goals, target audience, and requirements to understand your vision perfectly.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design</h3>
+                    <p>I create mockups and prototypes tailored to your brand and get your approval before coding.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Clean, efficient code that brings the design to life with all requested features and functionality.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Launch</h3>
+                    <p>Thorough testing, final revisions, and deployment. Your website goes live and reaches your audience!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Work With Me</h2>
+            <p class="section-subtitle">Dedicated to delivering exceptional results for every client</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Approach</h3>
+                    <p>Every website is uniquely crafted for your specific needs and goals. No templates, just custom solutions.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Efficient workflow and clear communication ensure your project is completed on time, every time.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💎</div>
+                    <h3>Quality Code</h3>
+                    <p>Clean, maintainable code following best practices for performance, security, and scalability.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile-First</h3>
+                    <p>All websites are fully responsive and optimized for perfect performance on any device.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Built with security best practices and reliable hosting recommendations for peace of mind.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>Ongoing Support</h3>
+                    <p>Post-launch support and maintenance to keep your website running smoothly and up-to-date.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss your ideas and create something amazing together!</p>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 40px 0; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <a href="mailto:lilian.zghibarta@gmail.com" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 40px; margin-bottom: 10px; color: #fff; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-envelope"></i></div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: #fff;">Email</div>
+                        <div style="color: rgba(255,255,255,0.9); font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">lilian.zghibarta@gmail.com</div>
+                    </a>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="tel:+353834416911" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 40px; margin-bottom: 10px; color: #fff; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fas fa-phone"></i></div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: #fff;">Phone</div>
+                        <div style="color: rgba(255,255,255,0.9); font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">+353 83 441 6911</div>
+                    </a>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="https://wa.me/353834416911" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 40px; margin-bottom: 10px; color: #fff; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-whatsapp"></i></div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: #fff;">WhatsApp</div>
+                        <div style="color: rgba(255,255,255,0.9); font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">+353 83 441 6911</div>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="mailto:lilian.zghibarta@gmail.com" class="cta-button-white">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LZ Web Solutions. All rights reserved. | Professional Web Development Services</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar hide/show on scroll
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('nav');
+        const scrollThreshold = 100; // Scroll threshold in pixels
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > scrollThreshold) {
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    navbar.classList.add('nav-hidden');
+                } else {
+                    // Scrolling up
+                    navbar.classList.remove('nav-hidden');
+                }
+            } else {
+                // At the top of the page
+                navbar.classList.remove('nav-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>

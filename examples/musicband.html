@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Dreams | Rock Band</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Electric Dreams - Where Rock Meets the Future. Pioneers of electronic rock fusion with three platinum albums, world tours, and unforgettable live performances.">
+    <meta name="keywords" content="Electric Dreams, rock band, electronic rock, live music, world tour, concert tickets, alternative rock, music band, Los Angeles band">
+    <meta name="author" content="Electric Dreams Band">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Electric Dreams | Rock Band">
+    <meta property="og:description" content="Electric Dreams - Where Rock Meets the Future. Experience the fusion of classic rock energy with electronic innovation.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1501612780327-45045538702b?w=1200&q=80&auto=format">
+    <meta property="og:url" content="https://electricdreamsband.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Electric Dreams">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electric Dreams | Rock Band">
+    <meta name="twitter:description" content="Electric Dreams - Where Rock Meets the Future. Experience the fusion of classic rock energy with electronic innovation.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1501612780327-45045538702b?w=1200&q=80&auto=format">
+    
+    <!-- Preconnect Hints -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Bebas Neue', 'Impact', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #8b5cf6;
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #8b5cf6;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(139, 92, 246, 0.3), rgba(0, 0, 0, 0.8)),
+                        url('https://images.unsplash.com/photo-1501612780327-45045538702b?w=1600&q=80&auto=format') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(139, 92, 246, 0.1) 0px,
+                transparent 1px,
+                transparent 2px,
+                rgba(139, 92, 246, 0.1) 3px
+            );
+            animation: scanlines 8s linear infinite;
+        }
+
+        @keyframes scanlines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 7em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #8b5cf6, 0 0 40px #8b5cf6;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #8b5cf6, 0 0 40px #8b5cf6; }
+            to { text-shadow: 0 0 30px #ec4899, 0 0 60px #ec4899; }
+        }
+
+        .hero p {
+            font-size: 2em;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #d8b4fe;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 20px 60px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            border: 3px solid transparent;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(236, 72, 153, 0.8);
+        }
+
+        /* About */
+        .about {
+            padding: 120px 30px;
+            background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 4.5em;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: 900;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #8b5cf6;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.5em;
+            color: #d8b4fe;
+            margin-bottom: 60px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            color: #e9d5ff;
+            line-height: 1.9;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Band Members */
+        .members {
+            padding: 120px 30px;
+            background: #000000;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .member-card {
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #8b5cf6;
+        }
+
+        .member-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .member-card:hover .member-image {
+            transform: scale(1.1);
+        }
+
+        .member-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%);
+            padding: 30px 20px;
+            transform: translateY(60%);
+            transition: transform 0.3s;
+        }
+
+        .member-card:hover .member-info {
+            transform: translateY(0);
+        }
+
+        .member-info h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #8b5cf6;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .member-role {
+            font-size: 1.2em;
+            color: #ec4899;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .member-bio {
+            color: #d8b4fe;
+            font-family: Arial, sans-serif;
+            font-size: 0.95em;
+        }
+
+        /* Music */
+        .music {
+            padding: 120px 30px;
+            background: linear-gradient(135deg, #2d0052 0%, #1a0033 100%);
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .album-card {
+            background: rgba(139, 92, 246, 0.1);
+            border: 3px solid #8b5cf6;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .album-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.5);
+        }
+
+        .album-cover {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .album-info {
+            padding: 30px;
+        }
+
+        .album-info h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: white;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .album-year {
+            color: #ec4899;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .album-tracks {
+            color: #d8b4fe;
+            font-family: Arial, sans-serif;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        /* Tour */
+        .tour {
+            padding: 120px 30px;
+            background: #000000;
+        }
+
+        .tour-dates {
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .tour-date {
+            display: grid;
+            grid-template-columns: 150px 1fr 200px 150px;
+            gap: 30px;
+            align-items: center;
+            padding: 30px;
+            margin-bottom: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 5px solid #8b5cf6;
+            transition: all 0.3s;
+        }
+
+        .tour-date:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(10px);
+        }
+
+        .date-day {
+            font-size: 1.5em;
+            color: #ec4899;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .date-venue {
+            font-size: 1.3em;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .date-city {
+            color: #d8b4fe;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        .ticket-btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-align: center;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .ticket-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+        }
+
+        /* Contact */
+        .contact {
+            padding: 120px 30px;
+            background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 60px auto 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .social-link {
+            font-size: 3em;
+            color: #8b5cf6;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            color: #ec4899;
+            transform: scale(1.2);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid #8b5cf6;
+            color: white;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #d8b4fe;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #ec4899;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+            border-top: 3px solid #8b5cf6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .back-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+        }
+
+        /* Tablet Devices */
+        @media (max-width: 992px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 25px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .hero h1 {
+                font-size: 5em;
+            }
+
+            .hero p {
+                font-size: 1.6em;
+            }
+
+            .section-title {
+                font-size: 3.5em;
+            }
+
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .music-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .tour-date {
+                grid-template-columns: 120px 1fr 180px 130px;
+                gap: 20px;
+                padding: 25px;
+            }
+        }
+
+        /* Mobile Devices */
+        @media (max-width: 768px) {
+            /* Hide navigation menu */
+            nav ul {
+                display: none;
+            }
+
+            nav .container {
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            /* Hero adjustments */
+            .hero {
+                padding: 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+                letter-spacing: 4px;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+                letter-spacing: 3px;
+            }
+
+            /* Full-width CTA button */
+            .cta-btn {
+                padding: 18px 40px;
+                font-size: 18px;
+                width: 90%;
+                max-width: 400px;
+            }
+
+            /* Sections padding */
+            .about,
+            .members,
+            .music,
+            .tour,
+            .contact {
+                padding: 80px 20px;
+            }
+
+            /* Section titles */
+            .section-title {
+                font-size: 2.5em;
+                letter-spacing: 4px;
+                margin-bottom: 20px;
+            }
+
+            .section-subtitle {
+                font-size: 1.2em;
+                letter-spacing: 2px;
+                margin-bottom: 40px;
+            }
+
+            /* About section */
+            .about-content p {
+                font-size: 1.1em;
+            }
+
+            /* Single column grids for band members */
+            .members-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .member-image {
+                height: 350px;
+            }
+
+            .member-info {
+                transform: translateY(0);
+            }
+
+            .member-info h3 {
+                font-size: 1.8em;
+            }
+
+            /* Single column grid for albums */
+            .music-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .album-cover {
+                height: 250px;
+            }
+
+            .album-info h3 {
+                font-size: 1.8em;
+            }
+
+            /* Tour dates mobile layout */
+            .tour-date {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 25px 20px;
+                gap: 15px;
+            }
+
+            .date-day {
+                font-size: 1.3em;
+            }
+
+            .date-venue {
+                font-size: 1.2em;
+            }
+
+            .date-city {
+                font-size: 1em;
+            }
+
+            /* Full-width ticket button */
+            .ticket-btn {
+                width: 100%;
+                padding: 15px 30px;
+            }
+
+            /* Contact section */
+            .social-links {
+                gap: 30px;
+            }
+
+            .social-link {
+                font-size: 2.5em;
+            }
+
+            /* Full-width submit button */
+            .submit-btn {
+                width: 100%;
+            }
+
+            /* Footer */
+            footer {
+                padding: 40px 20px;
+            }
+
+            .back-link {
+                width: 90%;
+                max-width: 350px;
+                padding: 12px 30px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+
+            /* Hero extra small screens */
+            .hero h1 {
+                font-size: 2.2em;
+                letter-spacing: 3px;
+            }
+
+            .hero p {
+                font-size: 1em;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .cta-btn {
+                padding: 15px 30px;
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+
+            /* Sections */
+            .about,
+            .members,
+            .music,
+            .tour,
+            .contact {
+                padding: 60px 15px;
+            }
+
+            .section-title {
+                font-size: 2em;
+                letter-spacing: 3px;
+            }
+
+            .section-subtitle {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            .about-content p {
+                font-size: 1em;
+            }
+
+            /* Member cards */
+            .member-image {
+                height: 300px;
+            }
+
+            .member-info h3 {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            .member-role {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            .member-bio {
+                font-size: 0.9em;
+            }
+
+            /* Album cards */
+            .album-cover {
+                height: 200px;
+            }
+
+            .album-info {
+                padding: 20px;
+            }
+
+            .album-info h3 {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            .album-year {
+                font-size: 1em;
+            }
+
+            .album-tracks {
+                font-size: 0.9em;
+            }
+
+            /* Tour dates */
+            .tour-date {
+                padding: 20px 15px;
+            }
+
+            .date-day {
+                font-size: 1.2em;
+            }
+
+            .date-venue {
+                font-size: 1.1em;
+            }
+
+            .date-city {
+                font-size: 0.95em;
+            }
+
+            .ticket-btn {
+                font-size: 14px;
+                padding: 12px 25px;
+            }
+
+            /* Contact form */
+            .contact-form input,
+            .contact-form textarea {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            .social-links {
+                gap: 25px;
+            }
+
+            .social-link {
+                font-size: 2em;
+            }
+
+            .submit-btn {
+                padding: 18px;
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            /* Footer */
+            footer {
+                padding: 30px 15px;
+            }
+
+            .back-link {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Electric Dreams</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#members">Band</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Electric Dreams</h1>
+            <p>Where Rock Meets the Future</p>
+            <a href="#tour" class="cta-btn">Get Tickets</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">The Sound of Tomorrow</p>
+            
+            <div class="about-content">
+                <p>Electric Dreams emerged from the underground Los Angeles music scene in 2018, fusing classic rock energy with electronic innovation to create a sound that's both nostalgic and futuristic.</p>
+                <p>With three platinum albums, sold-out world tours, and millions of streams, we've established ourselves as pioneers of a new musical movement that refuses to be confined by genre boundaries.</p>
+                <p>Our live performances are legendary for their energy, visual spectacle, and the raw connection we create with our audience. This isn't just music—it's an experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="members" id="members">
+        <div class="container">
+            <h2 class="section-title">The Band</h2>
+            <p class="section-subtitle">Meet the Dreamers</p>
+            
+            <div class="members-grid">
+                <div class="member-card">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80&auto=format" alt="Alex Storm - Lead vocalist of Electric Dreams performing on stage" class="member-image" width="400" height="400" loading="lazy">
+                    <div class="member-info">
+                        <h3>Alex Storm</h3>
+                        <p class="member-role">Lead Vocals</p>
+                        <p class="member-bio">The voice that defines our sound, with a range that defies expectations.</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&q=80&auto=format" alt="Jake Thunder - Lead guitarist of Electric Dreams with electric guitar" class="member-image" width="400" height="400" loading="lazy">
+                    <div class="member-info">
+                        <h3>Jake Thunder</h3>
+                        <p class="member-role">Lead Guitar</p>
+                        <p class="member-bio">Shredding solos that blend classic rock with modern electronic effects.</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&q=80&auto=format" alt="Maya Pulse - Bass and synth player for Electric Dreams band" class="member-image" width="400" height="400" loading="lazy">
+                    <div class="member-info">
+                        <h3>Maya Pulse</h3>
+                        <p class="member-role">Bass & Synth</p>
+                        <p class="member-bio">The groove master bringing the fusion of bass and electronic beats.</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80&auto=format" alt="Ryan Crash - Drummer for Electric Dreams rock band" class="member-image" width="400" height="400" loading="lazy">
+                    <div class="member-info">
+                        <h3>Ryan Crash</h3>
+                        <p class="member-role">Drums</p>
+                        <p class="member-bio">Powerful rhythms that drive our electric sound forward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="music" id="music">
+        <div class="container">
+            <h2 class="section-title">Discography</h2>
+            <p class="section-subtitle">Our Musical Journey</p>
+            
+            <div class="music-grid">
+                <div class="album-card">
+                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&q=80&auto=format" alt="Neon Nights album cover - Electric Dreams 2024 release" class="album-cover" width="600" height="300" loading="lazy">
+                    <div class="album-info">
+                        <h3>Neon Nights</h3>
+                        <p class="album-year">2024</p>
+                        <p class="album-tracks">12 tracks of pure electric energy. Our latest and most ambitious work yet.</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&q=80&auto=format" alt="Digital Hearts album cover - Electric Dreams platinum album 2022" class="album-cover" width="600" height="300" loading="lazy">
+                    <div class="album-info">
+                        <h3>Digital Hearts</h3>
+                        <p class="album-year">2022</p>
+                        <p class="album-tracks">Platinum album exploring love in the digital age. 10 unforgettable tracks.</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80&auto=format" alt="Circuit Breaker album cover - Electric Dreams debut album 2020" class="album-cover" width="600" height="300" loading="lazy">
+                    <div class="album-info">
+                        <h3>Circuit Breaker</h3>
+                        <p class="album-year">2020</p>
+                        <p class="album-tracks">The debut that started it all. Raw, powerful, and revolutionary.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tour" id="tour">
+        <div class="container">
+            <h2 class="section-title">World Tour 2026</h2>
+            <p class="section-subtitle">See Us Live</p>
+            
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <div class="date-day">FEB 15</div>
+                    <div class="date-venue">Madison Square Garden</div>
+                    <div class="date-city">New York, NY</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date-day">FEB 22</div>
+                    <div class="date-venue">The Forum</div>
+                    <div class="date-city">Los Angeles, CA</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date-day">MAR 5</div>
+                    <div class="date-venue">O2 Arena</div>
+                    <div class="date-city">London, UK</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date-day">MAR 18</div>
+                    <div class="date-venue">Bercy Arena</div>
+                    <div class="date-city">Paris, France</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date-day">APR 2</div>
+                    <div class="date-venue">Tokyo Dome</div>
+                    <div class="date-city">Tokyo, Japan</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date-day">APR 20</div>
+                    <div class="date-venue">Sydney Opera House</div>
+                    <div class="date-city">Sydney, Australia</div>
+                    <a href="#" class="ticket-btn">Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Connect with Us</p>
+            
+            <div class="contact-content">
+                <div class="social-links">
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🎵</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">▶️</a>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        <p style="margin-top: 25px; letter-spacing: 2px;">&copy; 2026 Electric Dreams. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.6;">Portfolio example by WebDev Pro</p>
+    </footer>
+</body>
+</html>
