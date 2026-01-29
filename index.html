@@ -560,20 +560,36 @@
 
             .portfolio-grid,
             .services-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
 
             .service-card {
-                padding: 30px 20px;
+                padding: 25px 15px;
+            }
+
+            .service-card h3 {
+                font-size: 1.1em;
+            }
+
+            .service-card p {
+                font-size: 0.9em;
             }
 
             .service-icon {
-                font-size: 50px;
+                font-size: 40px;
             }
 
             .portfolio-item {
-                margin-bottom: 10px;
+                margin-bottom: 0;
+            }
+
+            .portfolio-item h3 {
+                font-size: 1.1em;
+            }
+
+            .portfolio-item p {
+                font-size: 0.85em;
             }
 
             .cta-button,
@@ -583,11 +599,29 @@
             }
 
             .process-steps {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .process-step h3 {
+                font-size: 1.1em;
+            }
+
+            .process-step p {
+                font-size: 0.9em;
             }
 
             .why-us-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .feature h3 {
+                font-size: 1em;
+            }
+
+            .feature p {
+                font-size: 0.85em;
             }
 
             /* About section mobile */
@@ -609,7 +643,7 @@
             }
 
             .showcase .container > div[style*="display: grid"] {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: repeat(2, 1fr) !important;
                 gap: 15px !important;
             }
 
@@ -619,8 +653,8 @@
             }
 
             .showcase .container > div[style*="max-width"] > div[style*="margin-top: 50px"] > div[style*="display: grid"] {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
             }
 
             .showcase .container > div[style*="max-width"] > div[style*="margin-top: 50px"] h3 {

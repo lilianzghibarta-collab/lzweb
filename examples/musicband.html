@@ -618,14 +618,14 @@
                 font-size: 1.1em;
             }
 
-            /* Single column grids for band members */
+            /* Two column grids for band members */
             .members-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
 
             .member-image {
-                height: 350px;
+                height: 300px;
             }
 
             .member-info {
@@ -633,47 +633,58 @@
             }
 
             .member-info h3 {
-                font-size: 1.8em;
+                font-size: 1.5em;
             }
 
-            /* Single column grid for albums */
+            /* Two column grid for albums */
             .music-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .album-cover {
-                height: 250px;
-            }
-
-            .album-info h3 {
-                font-size: 1.8em;
-            }
-
-            /* Tour dates mobile layout */
-            .tour-date {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 25px 20px;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
             }
 
+            .album-cover {
+                height: 220px;
+            }
+
+            .album-info {
+                padding: 20px;
+            }
+
+            .album-info h3 {
+                font-size: 1.5em;
+            }
+
+            /* Tour dates mobile layout - 2 column grid */
+            .tour-dates {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .tour-date {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 20px 15px;
+                gap: 10px;
+            }
+
             .date-day {
-                font-size: 1.3em;
+                font-size: 1.1em;
             }
 
             .date-venue {
-                font-size: 1.2em;
+                font-size: 1em;
             }
 
             .date-city {
-                font-size: 1em;
+                font-size: 0.9em;
             }
 
             /* Full-width ticket button */
             .ticket-btn {
                 width: 100%;
-                padding: 15px 30px;
+                padding: 12px 20px;
+                font-size: 0.9em;
             }
 
             /* Contact section */
